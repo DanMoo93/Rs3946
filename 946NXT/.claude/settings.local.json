@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:api.github.com)",
+      "WebFetch(domain:github.com)",
+      "Bash(curl -L -o /tmp/OpenNXT-main.zip \"https://codeload.github.com/vgcman16/OpenNXT/zip/refs/heads/main\")",
+      "Bash(unzip -o /tmp/OpenNXT-main.zip)",
+      "Bash(mv OpenNXT-main/* OpenNXT-main/.* .)",
+      "Bash(./gradlew compileKotlin)",
+      "Bash(\"C:\\\\Program Files\\\\Eclipse Adoptium\\\\jdk-21.0.9.10-hotspot\\\\bin\\\\java.exe\" -version)",
+      "Bash(curl -sI \"https://api.adoptium.net/v3/assets/latest/25/hotspot?architecture=x64&image_type=jdk&os=windows&vendor=eclipse\")",
+      "Bash(curl -s \"https://api.adoptium.net/v3/assets/latest/25/hotspot?architecture=x64&image_type=jdk&os=windows&vendor=eclipse\")",
+      "Bash(python -c \"import sys,json; data=json.load\\(sys.stdin\\); pkg=data[0][''''binary''''][''''package'''']; print\\(pkg[''''name'''']\\); print\\(pkg[''''link'''']\\)\")",
+      "Bash(curl -L -o /tmp/jdk25.zip \"https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.2%2B10/OpenJDK25U-jdk_x64_windows_hotspot_25.0.2_10.zip\")",
+      "Bash(mkdir -p /c/RSPS/jdk25)",
+      "Bash(unzip -q -o /tmp/jdk25.zip -d /c/RSPS/jdk25/)",
+      "Bash(/c/RSPS/jdk25/jdk-25.0.2+10/bin/java -version)",
+      "Bash(export JAVA_HOME=\"C:\\\\RSPS\\\\jdk25\\\\jdk-25.0.2+10\")",
+      "Bash(ls /c/RSPS/946NXT/data/cache/js5-*.jcache)",
+      "Bash(./gradlew run:*)",
+      "Bash(python -c \":*)"
+    ]
+  }
+}
